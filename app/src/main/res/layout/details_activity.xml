@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false">
+
+        <ImageView
+            android:id="@+id/details_poster_iv"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/image_poster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/title_details_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:maxLines="4"
+            android:gravity="center"
+            android:minLines="1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/details_poster_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/details_poster_iv"
+            app:layout_constraintTop_toTopOf="@+id/details_poster_iv"
+            tools:text="Pokemon is fucking true even if you " />
+
+
+        <RatingBar
+            android:id="@+id/rating_bv"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:isIndicator="true"
+            android:numStars="10"
+            android:stepSize="0.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/details_poster_iv"
+            app:layout_constraintTop_toBottomOf="@+id/title_details_tv" />
+
+        <ImageView
+            android:id="@+id/event_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/event_iv"
+            android:src="@drawable/ic_event_black_24dp"
+            app:layout_constraintStart_toStartOf="@+id/details_poster_iv"
+            app:layout_constraintTop_toBottomOf="@+id/details_poster_iv" />
+
+
+        <TextView
+            android:id="@+id/release_date_details_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/event_calendar"
+            app:layout_constraintTop_toBottomOf="@+id/details_poster_iv"
+            tools:text="22-1-2010" />
+
+        <TextView
+            android:id="@+id/overview_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/overview"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release_date_details_tv" />
+
+
+        <TextView
+            android:padding="12dp"
+            android:id="@+id/plot_details_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/overview_tv"
+            tools:text="never got them all this is the plot" />
+
+
+        <TextView
+            android:id="@+id/trailer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/trailer_tv"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plot_details_tv" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_trailers"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trailer_tv">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/reviewsText"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerview_trailers" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:padding="12dp"
+            android:id="@+id/recyclervew_review"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

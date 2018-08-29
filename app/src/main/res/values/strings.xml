@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">PopularMovies</string>
+    <string name="movie_image">movie image</string>
+    <string name="image_about_movie">Image about movie</string>
+    <string name="overview">Overview</string>
+    <string name="event_iv">event_iv</string>
+    <string name="rating_image">rating image</string>
+    <string name="popular_movies">Popular movies</string>
+    <string name="top_rated">Top rated</string>
+    <string name="image_poster">image poster</string>
+    <string name="trailer_for_movie">trailer for movie</string>
+    <string name="play_icon">play icon</string>
+    <string name="pick">Pick one,to watch the trailer</string>
+    <string name="trailer_tv">Trailer</string>
+    <string name="reviewsText">Reviews</string>
+    <string name="settings">Settings</string>
+    <string name="pref_movies_label">Sort Movies</string>
+    <string name="pref_movie_key" translatable="false">movies</string>
+    <string name="pref_movie_label_popular_movies">Popular Movies</string>
+    <string name="pref_movie_label_top_movies">Top Rated Movies</string>
+    <string name="pref_movie_label_fav_movies">Favorite Movies</string>
+    <string name="pref_movie_top_movies_value">top_rated</string>
+    <string name="pref_movie_popular_movies_value">popular</string>
+    <string name="pref_movie_favorite_movies_value">favorite</string>
+    <string name="movies_default">popular</string>
+    <string name="click">click_for_starting_playing_trailer</string>
+    <string name="no_review">There is no review for that move</string>
+</resources>
